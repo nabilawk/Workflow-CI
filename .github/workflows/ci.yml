@@ -1,0 +1,29 @@
+name: MLflow CI - Retrain Model
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  retrain-model:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install mlflow==2.19.0 scikit-learn==1.6.1 pandas matplotlib seaborn pyngrok
+
+      - name: Run MLflow
+        run: |
+          mlflow run MLProject --no-conda
