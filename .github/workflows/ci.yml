@@ -25,4 +25,4 @@ jobs:
           pip install mlflow==2.19.0 scikit-learn==1.6.1 pandas matplotlib seaborn pyngrok
 
       - name: Run MLflow
-        run: mlflow run MLProject
+        run: mlflow run .
