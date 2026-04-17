@@ -1,14 +1,16 @@
-name: workflow-ci-env
+name: mlflow-env
+
 channels:
   - defaults
+  - conda-forge
+
 dependencies:
   - python=3.12
   - pip
   - pip:
-      - numpy
-      - pandas
-      - scikit-learn
       - mlflow==2.19.0
+      - scikit-learn
+      - pandas
       - matplotlib
       - seaborn
-      - openpyxl
+      - pyngrok
