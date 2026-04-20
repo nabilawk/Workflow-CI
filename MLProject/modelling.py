@@ -21,6 +21,8 @@ DATASET_PATH = os.path.join(
 	"diabetes_clean.csv"
 )
 
+df = pd.read_csv(DATASET_PATH)
+
 X = df.drop("Outcome", axis=1)
 y = df["Outcome"]
 
