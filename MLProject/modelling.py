@@ -12,7 +12,7 @@ from sklearn.metrics import (
 )
 
 # 1. Load Dataset
-df = pd.read_csv("namadataset_preprocessing/diabetes_clean.csv")
+df = pd.read_csv("MLProject/namadataset_preprocessing/diabetes_clean.csv")
 
 X = df.drop("Outcome", axis=1)
 y = df["Outcome"]
